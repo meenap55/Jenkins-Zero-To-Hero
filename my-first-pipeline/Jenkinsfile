@@ -1,11 +1,11 @@
 pipeline {
   agent {
-    docker { image 'centos:verify' }
+    docker { image 'node:16-alpine' }
   }
   stages {
     stage('Test') {
       steps {
-        sh 'ls -a'
+        sh 'node --version'
       }
     }
   }
